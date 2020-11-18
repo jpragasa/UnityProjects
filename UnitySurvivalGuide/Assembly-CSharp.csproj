@@ -80,6 +80,10 @@
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\1_QuickTips\UserInput\Main.cs" />
+    <Compile Include="Assets\Rotations\LookRotation\Aim.cs" />
+    <Compile Include="Assets\Rotations\QuatSlerp\AimSlerp.cs" />
+    <Compile Include="Assets\Rotations\QuaternionIdentity\CubeRotation.cs" />
+    <Compile Include="Assets\Rotations\QuaternionIdentity\CubeSpawner.cs" />
     <None Include="Assets\1_QuickTips\PostProcessing\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
