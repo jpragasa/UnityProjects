@@ -402,3 +402,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caabc89b1d92d94598dedd7c350db28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: 5, y: 5, z: 5}

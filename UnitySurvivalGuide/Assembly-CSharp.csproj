@@ -63,7 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\1_QuickTips\CollectibleGameObjs\Collectable.cs" />
     <Compile Include="Assets\1_QuickTips\GameObjPos\PlayerMovement.cs" />
+    <Compile Include="Assets\1_QuickTips\UserInput\Main.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/1_QuickTips/GameObjPos/MovementScene.unity
+- path: Assets/1_QuickTips/PauseSystem/Pause.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
