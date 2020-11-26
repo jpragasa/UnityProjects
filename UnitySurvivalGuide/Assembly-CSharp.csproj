@@ -80,6 +80,17 @@
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\1_QuickTips\UserInput\Main.cs" />
+    <Compile Include="Assets\Arrays\ArrayIntro.cs" />
+    <Compile Include="Assets\Arrays\ChallengeArr.cs" />
+    <Compile Include="Assets\Arrays\Demo\Cubez.cs" />
+    <Compile Include="Assets\Arrays\Demo\ItemDemo.cs" />
+    <Compile Include="Assets\Classes\Laser.cs" />
+    <Compile Include="Assets\Classes\PlayerShooter.cs" />
+    <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PlayerDamage.cs" />
+    <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PositionMatters.cs" />
+    <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\ReturnArrChallenge.cs" />
+    <Compile Include="Assets\FunctionsAndMethods\MoveObjects.cs" />
+    <Compile Include="Assets\FunctionsAndMethods\ObjectParamChallenge.cs" />
     <Compile Include="Assets\IfStatements\IfChallenge\ColorChanger.cs" />
     <Compile Include="Assets\IfStatements\ScoreAdder.cs" />
     <Compile Include="Assets\IfStatements\SpeedChallenge\Spd.cs" />

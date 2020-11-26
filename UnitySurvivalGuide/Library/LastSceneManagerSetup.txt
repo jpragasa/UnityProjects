@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Loops/WhileLoops/CoroutineChallengeMini.unity
+- path: Assets/Classes/IntroToClasses.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
