@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/SwitchStatements/WeaponSelect/WPSelect.unity
+- path: Assets/Loops/WhileLoops/CoroutineChallengeMini.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -83,6 +83,12 @@
     <Compile Include="Assets\IfStatements\IfChallenge\ColorChanger.cs" />
     <Compile Include="Assets\IfStatements\ScoreAdder.cs" />
     <Compile Include="Assets\IfStatements\SpeedChallenge\Spd.cs" />
+    <Compile Include="Assets\Loops\ForLoops\CoroutineExample.cs" />
+    <Compile Include="Assets\Loops\ForLoops\NamePrinter.cs" />
+    <Compile Include="Assets\Loops\WhileLoops\CChallengeMini.cs" />
+    <Compile Include="Assets\Loops\WhileLoops\DoLoop.cs" />
+    <Compile Include="Assets\Loops\WhileLoops\LoopChallenge.cs" />
+    <Compile Include="Assets\Loops\WhileLoops\WhileLoop.cs" />
     <Compile Include="Assets\Rotations\LookRotation\Aim.cs" />
     <Compile Include="Assets\Rotations\QuatSlerp\AimSlerp.cs" />
     <Compile Include="Assets\Rotations\QuaternionIdentity\CubeRotation.cs" />
