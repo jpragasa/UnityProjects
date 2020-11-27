@@ -90,7 +90,11 @@
     <Compile Include="Assets\Classes\PlayerShooter.cs" />
     <Compile Include="Assets\Classes\SerializedCustom\ItemClass.cs" />
     <Compile Include="Assets\Classes\SerializedCustom\ItemDatabase.cs" />
+    <Compile Include="Assets\Classes\SpellSystem\Food.cs" />
+    <Compile Include="Assets\Classes\SpellSystem\ITem.cs" />
+    <Compile Include="Assets\Classes\SpellSystem\ITemDB.cs" />
     <Compile Include="Assets\Classes\SpellSystem\Spell.cs" />
+    <Compile Include="Assets\Classes\SpellSystem\Weapon.cs" />
     <Compile Include="Assets\Classes\SpellSystem\Wizard.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PlayerDamage.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PositionMatters.cs" />
