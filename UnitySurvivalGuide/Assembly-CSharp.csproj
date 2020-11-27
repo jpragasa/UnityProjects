@@ -84,8 +84,14 @@
     <Compile Include="Assets\Arrays\ChallengeArr.cs" />
     <Compile Include="Assets\Arrays\Demo\Cubez.cs" />
     <Compile Include="Assets\Arrays\Demo\ItemDemo.cs" />
+    <Compile Include="Assets\Classes\CustomerDB\Customers.cs" />
+    <Compile Include="Assets\Classes\CustomerDB\CustomersDB.cs" />
     <Compile Include="Assets\Classes\Laser.cs" />
     <Compile Include="Assets\Classes\PlayerShooter.cs" />
+    <Compile Include="Assets\Classes\SerializedCustom\ItemClass.cs" />
+    <Compile Include="Assets\Classes\SerializedCustom\ItemDatabase.cs" />
+    <Compile Include="Assets\Classes\SpellSystem\Spell.cs" />
+    <Compile Include="Assets\Classes\SpellSystem\Wizard.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PlayerDamage.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PositionMatters.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\ReturnArrChallenge.cs" />

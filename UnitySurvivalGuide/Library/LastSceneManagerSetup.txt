@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Classes/IntroToClasses.unity
+- path: Assets/Classes/SpellSystem/SSystem.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
