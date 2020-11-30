@@ -84,6 +84,10 @@
     <Compile Include="Assets\Arrays\ChallengeArr.cs" />
     <Compile Include="Assets\Arrays\Demo\Cubez.cs" />
     <Compile Include="Assets\Arrays\Demo\ItemDemo.cs" />
+    <Compile Include="Assets\Classes\BankSys\Bank.cs" />
+    <Compile Include="Assets\Classes\BankSys\BankBehavior.cs" />
+    <Compile Include="Assets\Classes\BankSys\CreditUnionBehavior.cs" />
+    <Compile Include="Assets\Classes\BankSys\FederalCreditUnions.cs" />
     <Compile Include="Assets\Classes\CustomerDB\Customers.cs" />
     <Compile Include="Assets\Classes\CustomerDB\CustomersDB.cs" />
     <Compile Include="Assets\Classes\Laser.cs" />
