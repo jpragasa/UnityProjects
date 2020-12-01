@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Classes/BankSys/BankSysChallenge.unity
+- path: Assets/UtilityHelperClasses/Challenge/RandomColorChallenge.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
