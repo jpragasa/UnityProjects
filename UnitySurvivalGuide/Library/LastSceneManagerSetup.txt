@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Properties/Challenge/PropertiesChallenge.unity
+- path: Assets/Lists/IDataBase/DB.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
