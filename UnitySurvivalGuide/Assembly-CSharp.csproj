@@ -104,6 +104,11 @@
     <Compile Include="Assets\Classes\VirtualMethods\Dog.cs" />
     <Compile Include="Assets\Classes\VirtualMethods\Duck.cs" />
     <Compile Include="Assets\Classes\VirtualMethods\Pet.cs" />
+    <Compile Include="Assets\Enums\CustClass\ItemClassUno.cs" />
+    <Compile Include="Assets\Enums\CustClass\ItemDatabaseUno.cs" />
+    <Compile Include="Assets\Enums\EnemyAI\EnemyAI.cs" />
+    <Compile Include="Assets\Enums\LevelSelector\LevelSelect.cs" />
+    <Compile Include="Assets\Enums\SelectDifficulty.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PlayerDamage.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\PositionMatters.cs" />
     <Compile Include="Assets\FunctionsAndMethods\AliveChallenge\ReturnArrChallenge.cs" />

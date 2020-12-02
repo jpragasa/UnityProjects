@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Enums/LevelSelector/Easy.unity
+    guid: 113f16fa28d588948a78f3c1670be740
+  - enabled: 1
+    path: Assets/Enums/LevelSelector/Normal.unity
+    guid: b48b4b9b3b8a42241831f46b9570df1a
+  - enabled: 1
+    path: Assets/Enums/LevelSelector/Hard.unity
+    guid: 6efeeda2385941d4fb2a0bf417c3018e
+  - enabled: 1
+    path: Assets/Enums/LevelSelector/Expert.unity
+    guid: afd16fbfdd9965943ac33444fecf537c
   m_configObjects: {}

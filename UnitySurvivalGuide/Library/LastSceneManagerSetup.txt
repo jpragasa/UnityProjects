@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Lists/IDataBase/DB.unity
+- path: Assets/Enums/LevelSelector/LVSelector.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
