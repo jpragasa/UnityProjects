@@ -104,6 +104,7 @@
     <Compile Include="Assets\Classes\VirtualMethods\Dog.cs" />
     <Compile Include="Assets\Classes\VirtualMethods\Duck.cs" />
     <Compile Include="Assets\Classes\VirtualMethods\Pet.cs" />
+    <Compile Include="Assets\Dictionaries\DictItemClass.cs" />
     <Compile Include="Assets\Enums\CustClass\ItemClassUno.cs" />
     <Compile Include="Assets\Enums\CustClass\ItemDatabaseUno.cs" />
     <Compile Include="Assets\Enums\EnemyAI\EnemyAI.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Assets\Namespaces\WeaponX.cs" />
     <Compile Include="Assets\Properties\Challenge\PropertyChallenge.cs" />
     <Compile Include="Assets\Properties\GameManager0.cs" />
+    <Compile Include="Assets\Properties\ITEMDB.cs" />
     <Compile Include="Assets\Rotations\LookRotation\Aim.cs" />
     <Compile Include="Assets\Rotations\QuatSlerp\AimSlerp.cs" />
     <Compile Include="Assets\Rotations\QuaternionIdentity\CubeRotation.cs" />

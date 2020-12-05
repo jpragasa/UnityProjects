@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Enums/LevelSelector/LVSelector.unity
+- path: Assets/Dictionaries/DictIntro.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
