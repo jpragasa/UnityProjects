@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 79
+  controlID: 112
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 781, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 14
+  controlID: 152
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_MinSize: {x: 505, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 15
+  controlID: 53
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_MinSize: {x: 505, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 16
+  controlID: 54
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -414,19 +414,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TextUpdater
+    - Assets/Abstract
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/TextUpdater
+  - Assets/Abstract
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jprag\Documents\Unity_Repos\Unity\UnityProjects\UnitySurvivalGuide
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 24}
-    m_SelectedIDs: d8360000
-    m_LastClickedID: 14040
+    scrollPos: {x: 0, y: 8}
+    m_SelectedIDs: 4c3e0000
+    m_LastClickedID: 15948
     m_ExpandedIDs: 00000000a6360000a8360000aa360000ac360000ae360000b0360000b2360000b4360000b6360000b836000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fee5ffff
-      m_LastClickedID: -6658
-      m_ExpandedIDs: e6faffff58360000
+      m_SelectedIDs: 6a3e0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 04e2ffff9ee6ffff52ebffff16fbffff5e360000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

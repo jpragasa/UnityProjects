@@ -80,6 +80,7 @@
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\1_QuickTips\UserInput\Main.cs" />
+    <Compile Include="Assets\Abstract\AbstractMain.cs" />
     <Compile Include="Assets\Arrays\ArrayIntro.cs" />
     <Compile Include="Assets\Arrays\ChallengeArr.cs" />
     <Compile Include="Assets\Arrays\Demo\Cubez.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="Assets\Classes\VirtualMethods\Duck.cs" />
     <Compile Include="Assets\Classes\VirtualMethods\Pet.cs" />
     <Compile Include="Assets\Dictionaries\DictItemClass.cs" />
+    <Compile Include="Assets\Dictionaries\DictWithPrim\DictWithPrimMain.cs" />
+    <Compile Include="Assets\Dictionaries\PlayerConn\PlayerConnMain.cs" />
     <Compile Include="Assets\Enums\CustClass\ItemClassUno.cs" />
     <Compile Include="Assets\Enums\CustClass\ItemDatabaseUno.cs" />
     <Compile Include="Assets\Enums\EnemyAI\EnemyAI.cs" />
