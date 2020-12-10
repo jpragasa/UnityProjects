@@ -80,7 +80,14 @@
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\1_QuickTips\PostProcessing\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\1_QuickTips\UserInput\Main.cs" />
+    <Compile Include="Assets\Abstract\AbstractEnemy.cs" />
     <Compile Include="Assets\Abstract\AbstractMain.cs" />
+    <Compile Include="Assets\Abstract\Challenge\EmployeeExperienceMain.cs" />
+    <Compile Include="Assets\Abstract\Intefaces\Enemy_1.cs" />
+    <Compile Include="Assets\Abstract\Intefaces\IDamagable.cs" />
+    <Compile Include="Assets\Abstract\Intefaces\InterfacesIntro.cs" />
+    <Compile Include="Assets\Abstract\Intefaces\MyMainPoly.cs" />
+    <Compile Include="Assets\Abstract\Intefaces\Player_1.cs" />
     <Compile Include="Assets\Arrays\ArrayIntro.cs" />
     <Compile Include="Assets\Arrays\ChallengeArr.cs" />
     <Compile Include="Assets\Arrays\Demo\Cubez.cs" />

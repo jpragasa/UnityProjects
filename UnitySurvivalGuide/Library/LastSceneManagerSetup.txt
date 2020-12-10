@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Abstract/Abstraction.unity
+- path: Assets/Abstract/Intefaces/Interfaces.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
