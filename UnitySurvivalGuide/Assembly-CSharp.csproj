@@ -112,6 +112,12 @@
     <Compile Include="Assets\Classes\VirtualMethods\Dog.cs" />
     <Compile Include="Assets\Classes\VirtualMethods\Duck.cs" />
     <Compile Include="Assets\Classes\VirtualMethods\Pet.cs" />
+    <Compile Include="Assets\DelegatesAndEvents\Challenge1\Cube_.cs" />
+    <Compile Include="Assets\DelegatesAndEvents\Challenge1\EventChallengeMain.cs" />
+    <Compile Include="Assets\DelegatesAndEvents\DelegatesMain.cs" />
+    <Compile Include="Assets\DelegatesAndEvents\Events\Cube.cs" />
+    <Compile Include="Assets\DelegatesAndEvents\Events\EventsMain.cs" />
+    <Compile Include="Assets\DelegatesAndEvents\Events\Sphere.cs" />
     <Compile Include="Assets\Dictionaries\DictItemClass.cs" />
     <Compile Include="Assets\Dictionaries\DictWithPrim\DictWithPrimMain.cs" />
     <Compile Include="Assets\Dictionaries\PlayerConn\PlayerConnMain.cs" />
