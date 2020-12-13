@@ -147,6 +147,13 @@
     <Compile Include="Assets\IfStatements\ScoreAdder.cs" />
     <Compile Include="Assets\IfStatements\SpeedChallenge\Spd.cs" />
     <Compile Include="Assets\LINQ\Any\AnyMain.cs" />
+    <Compile Include="Assets\LINQ\ChallengeOne\ChallengOneMain.cs" />
+    <Compile Include="Assets\LINQ\Contains\ContainsMain.cs" />
+    <Compile Include="Assets\LINQ\Distinct\DistinctMain.cs" />
+    <Compile Include="Assets\LINQ\FilterItems\FilterMain.cs" />
+    <Compile Include="Assets\LINQ\OrderByDescending\OrderByDescendingMain.cs" />
+    <Compile Include="Assets\LINQ\ReadAndConvert\RAndQmain.cs" />
+    <Compile Include="Assets\LINQ\Where\WhereMain.cs" />
     <Compile Include="Assets\Lists\Challenge1\ListOfNames.cs" />
     <Compile Include="Assets\Lists\Challenge2\GameManagerForChallenge.cs" />
     <Compile Include="Assets\Lists\GameManager.cs" />
@@ -160,6 +167,7 @@
     <Compile Include="Assets\Loops\WhileLoops\LoopChallenge.cs" />
     <Compile Include="Assets\Loops\WhileLoops\WhileLoop.cs" />
     <Compile Include="Assets\Namespaces\WeaponX.cs" />
+    <Compile Include="Assets\ObjectPooling\PoolingIntroMain.cs" />
     <Compile Include="Assets\Properties\Challenge\PropertyChallenge.cs" />
     <Compile Include="Assets\Properties\GameManager0.cs" />
     <Compile Include="Assets\Properties\ITEMDB.cs" />
@@ -167,6 +175,15 @@
     <Compile Include="Assets\Rotations\QuatSlerp\AimSlerp.cs" />
     <Compile Include="Assets\Rotations\QuaternionIdentity\CubeRotation.cs" />
     <Compile Include="Assets\Rotations\QuaternionIdentity\CubeSpawner.cs" />
+    <Compile Include="Assets\SingltonDesign\MonoSingleton\ExampleMainSingleton.cs" />
+    <Compile Include="Assets\SingltonDesign\MonoSingleton\LevelManager.cs" />
+    <Compile Include="Assets\SingltonDesign\MonoSingleton\MonoSingletonMain.cs" />
+    <Compile Include="Assets\SingltonDesign\MonoSingleton\PlayerMonoSingleton.cs" />
+    <Compile Include="Assets\SingltonDesign\Player__.cs" />
+    <Compile Include="Assets\SingltonDesign\SingletonIntroMain.cs" />
+    <Compile Include="Assets\SingltonDesign\SingletonUI\PlayerUIEx.cs" />
+    <Compile Include="Assets\SingltonDesign\SingletonUI\UIManagerMain.cs" />
+    <Compile Include="Assets\SingltonDesign\SpawnManagerChallenge\SpawnManagerSing.cs" />
     <Compile Include="Assets\StaticTypes\Example\Enemy.cs" />
     <Compile Include="Assets\StaticTypes\Example\SpawnManager.cs" />
     <Compile Include="Assets\StaticTypes\Example\UIManager.cs" />
@@ -176,6 +193,7 @@
     <Compile Include="Assets\StaticTypes\Test.cs" />
     <Compile Include="Assets\StaticTypes\UtilityHelperClasses\Challenge\ColorCH.cs" />
     <Compile Include="Assets\StaticTypes\UtilityHelperClasses\Challenge\ColorHelper.cs" />
+    <Compile Include="Assets\StaticTypes\UtilityHelperClasses\Challenge\Spawner.cs" />
     <Compile Include="Assets\StaticTypes\UtilityHelperClasses\PlayerEx.cs" />
     <Compile Include="Assets\StaticTypes\UtilityHelperClasses\UtilityHelper.cs" />
     <Compile Include="Assets\SwitchStatements\SwitchColors.cs" />
