@@ -167,6 +167,8 @@
     <Compile Include="Assets\Loops\WhileLoops\LoopChallenge.cs" />
     <Compile Include="Assets\Loops\WhileLoops\WhileLoop.cs" />
     <Compile Include="Assets\Namespaces\WeaponX.cs" />
+    <Compile Include="Assets\ObjectPooling\Bullet.cs" />
+    <Compile Include="Assets\ObjectPooling\PoolManager.cs" />
     <Compile Include="Assets\ObjectPooling\PoolingIntroMain.cs" />
     <Compile Include="Assets\Properties\Challenge\PropertyChallenge.cs" />
     <Compile Include="Assets\Properties\GameManager0.cs" />
