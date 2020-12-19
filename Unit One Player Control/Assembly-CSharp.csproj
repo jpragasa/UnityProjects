@@ -68,6 +68,9 @@
     <Compile Include="Assets\ArionDigital\CrashCrate\Scripts\DestroyAfterTime.cs" />
     <Compile Include="Assets\ArionDigital\CrashCrate\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\ObjRotation.cs" />
+    <Compile Include="Assets\Scripts\PlaneCameraFollow.cs" />
+    <Compile Include="Assets\Scripts\PlaneController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
