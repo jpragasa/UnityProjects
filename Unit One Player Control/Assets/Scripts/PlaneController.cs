@@ -24,6 +24,7 @@ public class PlaneController : MonoBehaviour
         }
         transform.Translate(Vector3.up * Time.deltaTime * speed * verticalMovement);
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalMovement);
+        transform.Rotate(Vector3.forward * Time.deltaTime * speed * verticalMovement);
 
         if(speed <= 0)
         {
