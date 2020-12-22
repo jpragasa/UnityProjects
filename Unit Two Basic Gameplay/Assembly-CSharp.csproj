@@ -67,8 +67,13 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Shooting\Food.cs" />
     <Compile Include="Assets\Scripts\Shooting\FoodManager.cs" />
+    <Compile Include="Assets\Scripts\Spawning\Animal.cs" />
+    <Compile Include="Assets\Scripts\Spawning\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\VoxelAnimals\Assets\Scripts\PlayerMovement.cs" />
     <None Include="Assets\AddOns\Mg3D_Food\README.txt" />
+    <None Include="Assets\ShootingSound\ReadMe.txt" />
+    <None Include="Assets\Positions.txt" />
     <None Include="Assets\VoxelAnimals\Documentation\ReadMe.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
