@@ -30,6 +30,14 @@ public class SpawnManager : MonoBehaviour
         _instance = this;
     }
 
+    public void SetAnimalsInactive()
+    {
+        foreach(GameObject obj in _animalList)
+        {
+            obj.SetActive(false);
+        }
+    }
+
     private List<GameObject> GenerateAnimals(int amountOfAnimals)
     {
         for(int i = 0; i < amountOfAnimals; i++)
