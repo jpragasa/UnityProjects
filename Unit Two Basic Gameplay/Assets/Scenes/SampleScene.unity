@@ -472,7 +472,7 @@ MonoBehaviour:
   - 27.58
   - 35
   zOffset: 18.07
-  _instantiationSpeed: 1
+  _instantiationSpeed: 0.8
 --- !u!4 &707009224
 Transform:
   m_ObjectHideFlags: 0
@@ -757,13 +757,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 4.8
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 1000.84
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 22
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -924,7 +924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 290627391}
   timerText: {fileID: 1439318672}
-  levelTime: 15
+  levelTime: 120
 --- !u!4 &1015699373
 Transform:
   m_ObjectHideFlags: 0
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0209eca1e39b0364f8aa20df48093cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 100
   horizontalInput: 5
   constraintMin: -41
   constraintMax: 41

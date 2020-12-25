@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    private static SpawnManager _instance;
+    
     [SerializeField] private GameObject _animalContainer;
     [SerializeField] private List<GameObject> _animalList;
     [SerializeField] private List<GameObject> animals;
@@ -12,6 +12,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float[] _spawnPositionsX;
     [SerializeField] private float zOffset;
     [SerializeField] private float _instantiationSpeed;
+    private static SpawnManager _instance;
+
     public static SpawnManager Instance
     {
         get

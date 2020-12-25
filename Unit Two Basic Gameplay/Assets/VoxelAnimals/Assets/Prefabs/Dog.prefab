@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239767e65c9a78d4285e5387388ce09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _despawnTime: 10
+  _despawnTime: 15
   _speed: 20
   constraintX: -41
   constraintY: 41
