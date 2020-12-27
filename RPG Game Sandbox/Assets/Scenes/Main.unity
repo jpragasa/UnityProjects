@@ -262,7 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _rotationSpeed: 100
+  _rotationSpeed: 110
+  _runSpeed: 5
 --- !u!54 &107394112
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -389,6 +390,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 888406902}
   _image: {fileID: 888406900}
+  _yTextOffset: 1.7
+  _xTextOffset: 1
+  _xImageOffset: 1
+  _yImageOffset: 1.5
   text: 
 --- !u!4 &342860856
 Transform:
@@ -405,6 +410,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &446179955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6699873785605030276, guid: 49ed54528ea3d674b97850f8552ac3e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 888406899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &446203098
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,9 +600,9 @@ GameObject:
   - component: {fileID: 667547465}
   - component: {fileID: 667547464}
   - component: {fileID: 667547463}
-  - component: {fileID: 667547462}
   - component: {fileID: 667547461}
   - component: {fileID: 667547460}
+  - component: {fileID: 667547462}
   m_Layer: 0
   m_Name: Jackie
   m_TagString: AI
@@ -615,6 +626,9 @@ MonoBehaviour:
   _text: My Name is Jackie. I really love the beach! :D
   _textContainer: {fileID: 1043525509}
   _imageContainer: {fileID: 794116618}
+  _textObj: {fileID: 801201312}
+  _imageObj: {fileID: 446179955}
+  _player: {fileID: 107394110}
   delayX: 0.01
   delayY: 0.1
 --- !u!54 &667547461
@@ -627,11 +641,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!136 &667547462
 CapsuleCollider:
@@ -643,10 +657,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1.812341
+  m_Height: 3.624682
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.11800313, y: 0.08772218, z: 0.1389947}
 --- !u!23 &667547463
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -973,9 +987,9 @@ GameObject:
   - component: {fileID: 758630073}
   - component: {fileID: 758630072}
   - component: {fileID: 758630071}
-  - component: {fileID: 758630070}
   - component: {fileID: 758630075}
   - component: {fileID: 758630074}
+  - component: {fileID: 758630070}
   m_Layer: 0
   m_Name: Josh
   m_TagString: AI
@@ -993,10 +1007,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1.812341
+  m_Height: 3.624682
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.11800313, y: 0.08772218, z: 0.1389947}
 --- !u!23 &758630071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1079,6 +1093,9 @@ MonoBehaviour:
     I am Josh.
   _textContainer: {fileID: 1498098648}
   _imageContainer: {fileID: 71877309}
+  _textObj: {fileID: 801201312}
+  _imageObj: {fileID: 446179955}
+  _player: {fileID: 107394110}
   delayX: 0.01
   delayY: 0.05
 --- !u!54 &758630075
@@ -1091,11 +1108,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!1 &765215507
 GameObject:
@@ -1193,6 +1210,12 @@ Transform:
   m_Father: {fileID: 667547465}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &801201312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6699873785460661411, guid: 49ed54528ea3d674b97850f8552ac3e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 888406899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &838507541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aiList:
   - {fileID: 758630074}
+  - {fileID: 667547460}
 --- !u!4 &838507543
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,12 +1382,73 @@ PrefabInstance:
     - target: {fileID: 6699873785460661410, guid: 49ed54528ea3d674b97850f8552ac3e2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1035.6
+      value: 991.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6699873785460661410, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785460661410, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785460661413, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785460661413, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785460661413, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785460661413, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785460661413, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785605030278, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b4a8acd5ca5aff2408eca88e28646499,
+        type: 3}
     - target: {fileID: 6699873785605030279, guid: 49ed54528ea3d674b97850f8552ac3e2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 1035.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785605030279, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785605030279, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785605030279, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699873785605030279, guid: 49ed54528ea3d674b97850f8552ac3e2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49ed54528ea3d674b97850f8552ac3e2, type: 3}
@@ -1373,7 +1458,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 888406899}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 446179955}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1391,7 +1476,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 888406899}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 801201312}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}

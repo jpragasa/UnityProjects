@@ -8,6 +8,10 @@ public class UIManager : MonoBehaviour
     private static UIManager _instance;
     [SerializeField] private Text _text;
     [SerializeField] private Image _image;
+    [SerializeField] private float _yTextOffset;
+    [SerializeField] private float _xTextOffset;
+    [SerializeField] private float _xImageOffset;
+    [SerializeField] private float _yImageOffset;
     public string text;
     private Transform tempTr1;
     private Transform tempTr2;
@@ -35,10 +39,21 @@ public class UIManager : MonoBehaviour
         try
         {
             _text.text = text;
-            Vector3 pos1 = Camera.main.WorldToScreenPoint(new Vector3(tempTr1.position.x, tempTr1.position.y + 1, tempTr1.position.z));
+            Vector3 pos1 = Camera.main.WorldToScreenPoint(new Vector3(
+
+                tempTr1.position.x + _xTextOffset,
+                tempTr1.position.y + _yTextOffset, 
+                tempTr1.position.z));
+
             _text.transform.position = pos1;
-            Vector3 pos2 = Camera.main.WorldToScreenPoint(new Vector3(tempTr2.position.x, tempTr2.position.y + 1, tempTr2.position.z));
+            Vector3 pos2 = Camera.main.WorldToScreenPoint(new Vector3(
+
+                tempTr2.position.x + _xTextOffset, 
+                tempTr2.position.y + _yImageOffset, 
+                tempTr2.position.z));
+
             _image.transform.position = pos2;
+
         } 
         catch(NullReferenceException e)
         {

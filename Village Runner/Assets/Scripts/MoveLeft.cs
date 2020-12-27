@@ -22,8 +22,7 @@ public class MoveLeft : MonoBehaviour
         else
         {
             Invoke("Hide", _spawnTime);
-        }
-        
+        }       
     }
 
     private void Hide()
@@ -42,6 +41,9 @@ public class MoveLeft : MonoBehaviour
         {
             SpawnManager.Instance.SetInActive();
             _playerScript.gameOver = false;
+            _playerScript.dirtParticle.Clear();
+            _playerScript.dirtParticle.Stop();
+            _playerScript.GetAudioSource().Play();
             Animator anim = _playerScript.GetComponent<Animator>();
             anim.SetBool("Death_b", false);
         }

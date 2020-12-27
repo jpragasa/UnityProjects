@@ -5,10 +5,21 @@ using UnityEngine.UI;
 
 public class AI : MonoBehaviour
 {
+
+
+    /// <summary>
+    /// NOTES:
+    /// - Whenever you want to use reuse the text and image UI, just set the texObj and imageObj active
+    ///   and inactive accordingly
+    /// </summary>
+
     [SerializeField] private string _name;
     [SerializeField] private string _text;    
     [SerializeField] private Transform _textContainer;
     [SerializeField] private Transform _imageContainer;
+    [SerializeField] private GameObject _textObj;
+    [SerializeField] private GameObject _imageObj;
+    [SerializeField] private Transform _player;
     [SerializeField] private float delayX;
     [SerializeField] private float delayY;
     private string currentText;
@@ -29,6 +40,23 @@ public class AI : MonoBehaviour
         return _text;
     }
 
+    private void Start()
+    {
+        _player = GameObject.Find("Player").GetComponent<Transform>();
+    }
+
+    private void FixedUpdate()
+    {        
+        if(_player.position.x - transform.position.x < 10) 
+        {
+            Vector3 directionToFace = _player.position - transform.position;
+            Debug.Log(_player.position.x - transform.position.x);
+            Debug.DrawRay(transform.position, directionToFace, Color.cyan);
+            Quaternion targetRotation = Quaternion.LookRotation(directionToFace);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime);
+        }                             
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(this.gameObject.CompareTag("AI") && other.gameObject.CompareTag("Player"))
@@ -36,6 +64,8 @@ public class AI : MonoBehaviour
             flag = true;
             if (flag && Input.GetKey(KeyCode.Space))
             {
+                _textObj.SetActive(true);
+                _imageObj.SetActive(true);
                 UIManager.Instance.ResetText();
                 StartCoroutine(UpdateTextWithWait());
             }
@@ -58,6 +88,14 @@ public class AI : MonoBehaviour
             counter++;
             yield return new WaitForSeconds(Random.Range(delayX, delayY));
         }
-        flag = false;            
+        
+        flag = false;
+        if(!flag)
+        {
+            Debug.Log("Connected");
+            yield return new WaitForSeconds(1f);
+            _textObj.SetActive(false);
+            _imageObj.SetActive(false);
+        }
     }
 }

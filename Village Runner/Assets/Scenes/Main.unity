@@ -298,14 +298,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdb449b264ec994abde1015536356ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 2200
-  _gravityModifier: 3.5
+  _jumpForce: 2400
+  _gravityModifier: 3.8
   isOnGround: 1
-  explosionEffect: {fileID: 1104078479}
-  dirtParticle: {fileID: 2103282273}
   audioSource: {fileID: 414587434}
   audioClip: {fileID: 8300000, guid: d803f56632f3ac44eae0feee78d194fd, type: 3}
+  jumpClip: {fileID: 8300000, guid: 6e110ee569cc23148a024775e450f04f, type: 3}
   volumeControl: 1
+  explosionEffect: {fileID: 1104078479}
+  dirtParticle: {fileID: 2103282273}
   gameOver: 0
 --- !u!82 &414587434
 AudioSource:
@@ -317,7 +318,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d8f7a78a964aa489aafb3749d805cd4b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -917,9 +918,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19810594, guid: 079954accd64b32419ec069129c81273, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19810594, guid: 079954accd64b32419ec069129c81273, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19821056, guid: 079954accd64b32419ec069129c81273, type: 3}
       propertyPath: cullingMode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19877906, guid: 079954accd64b32419ec069129c81273, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079954accd64b32419ec069129c81273, type: 3}
