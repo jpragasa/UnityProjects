@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
     private static SpawnManager _instance;
+    [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private int _score;
     [SerializeField] private List<GameObject> _enemyList;
     [SerializeField] private List<GameObject> _enemies;
     [SerializeField] private List<Transform> _parentTransform;
@@ -12,9 +17,16 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject _enemyContainer;
     [SerializeField] private float _spawnDelayMin = 3f;
     [SerializeField] private float _spawnDelayMax = 6f;
-
+    [SerializeField] private TextMeshProUGUI _gameOverText;
+    [SerializeField] private TextMeshProUGUI _livesText;
+    private int originalLives;
+    [SerializeField] public int lives = 3;
+    [SerializeField] private Button _resetButton; 
     private static GameObject previous;
     private static GameObject _oneBeforePrevious;
+    public bool isGameOver = false;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip gameOverClip;
     public static SpawnManager Instance
     {
         get
@@ -38,6 +50,10 @@ public class SpawnManager : MonoBehaviour
         _oneBeforePrevious = null;
         GenerateEnemies(_enemies.Count);
         StartCoroutine(Spawn());
+        originalLives = lives;
+        _score = 0;
+        _scoreText.text = string.Format("Score: {0}", _score);
+        _livesText.text = string.Format("Lives: {0}", lives);
     }
 
     public GameObject RequestEnemy()
@@ -69,6 +85,39 @@ public class SpawnManager : MonoBehaviour
         return newEnemy;
     }
 
+    public void UpdateScore(int amountToAdd)
+    {
+        _score += amountToAdd;
+        _scoreText.text = string.Format("Score: {0}", _score);
+    }
+
+    public void UpdateLives()
+    {
+        lives--;
+        _livesText.text = string.Format("Lives: {0}", lives);
+    }
+
+    public void GameOver()
+    {
+        audioSource.PlayOneShot(gameOverClip, 1.0f);
+        isGameOver = true;
+        DeactivateEnemies();
+        _gameOverText.gameObject.SetActive(true);
+        _resetButton.gameObject.SetActive(true);
+    }
+
+    public void ResetGame()
+    {
+        _gameOverText.gameObject.SetActive(false);
+        _resetButton.gameObject.SetActive(false);
+        lives = originalLives;
+        _score = 0;
+        _scoreText.text = string.Format("Score: {0}", _score);
+        _livesText.text = string.Format("Lives: {0}", lives);
+        isGameOver = false;
+        StartCoroutine(Spawn());
+    }
+
     public void DeactivateEnemies()
     {
         foreach(var obj in _enemyList)
@@ -91,13 +140,23 @@ public class SpawnManager : MonoBehaviour
         return _enemyList;
     }
 
+    public void PlayAudioClip(AudioClip ac)
+    {
+        GetComponent<AudioSource>().PlayOneShot(ac, 1.0f);
+    }
+
     IEnumerator Spawn()
     {
-        while(true)
+        while(!isGameOver)
         {
             GameObject obj = Instance.RequestEnemy();
             obj.transform.position = new Vector3(Random.Range(-4, 4), -4);
             yield return new WaitForSeconds(Random.Range(_spawnDelayMin, _spawnDelayMax));
+        }
+
+        if(isGameOver)
+        {
+            GameOver();
         }
     }
 }

@@ -12,6 +12,8 @@ public class Target : MonoBehaviour
     [SerializeField] private float ySpawnPos = -6;
     [SerializeField] private float despawnDelayX = 5f;
     [SerializeField] private float despawnDelayY = 10f;
+    [SerializeField] private int targetManipValue = 0;
+    [SerializeField] private ParticleSystem explosionParticle;
     private Vector3 originalVelocity;
     private Vector3 originalAngularVelocity;
 
@@ -58,17 +60,23 @@ public class Target : MonoBehaviour
     {        
         this.gameObject.SetActive(false);
     }
-    
 
+    [SerializeField] AudioClip myClip;
     private void OnMouseDown()
     {
-        this.gameObject.SetActive(false);
+        SpawnManager.Instance.PlayAudioClip(myClip);
+        if(this.gameObject.CompareTag("Bad"))
+        {
+            this.gameObject.SetActive(false);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            SpawnManager.Instance.UpdateScore(targetManipValue);
+            SpawnManager.Instance.GameOver();
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            SpawnManager.Instance.UpdateScore(targetManipValue);
+        }       
     }
-
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        this.gameObject.SetActive(false);
-    }
-    */
 }
