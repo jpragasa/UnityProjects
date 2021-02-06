@@ -22,11 +22,14 @@ public class SpawnManager : MonoBehaviour
     private int originalLives;
     [SerializeField] public int lives = 3;
     [SerializeField] private Button _resetButton; 
+    [SerializeField] private Button _returnToTitleButton; 
     private static GameObject previous;
     private static GameObject _oneBeforePrevious;
     public bool isGameOver = false;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip gameOverClip;
+    public Button[] buttons;
+    public TextMeshProUGUI title;
     public static SpawnManager Instance
     {
         get
@@ -35,7 +38,7 @@ public class SpawnManager : MonoBehaviour
             {
                 Debug.Log("Spawn Manager does not exist");
             }
-
+            
             return _instance;
         }
     }
@@ -45,11 +48,21 @@ public class SpawnManager : MonoBehaviour
         _instance = this;
     }
 
+    public void SetDelayMin(float delay)
+    {
+        this._spawnDelayMin = delay;
+    }
+
+    public void SetDelayMax(float delay)
+    {
+        this._spawnDelayMax = delay;
+    }
+
     private void Start()
     {
         _oneBeforePrevious = null;
         GenerateEnemies(_enemies.Count);
-        StartCoroutine(Spawn());
+        //StartCoroutine(Spawn());
         originalLives = lives;
         _score = 0;
         _scoreText.text = string.Format("Score: {0}", _score);
@@ -104,12 +117,35 @@ public class SpawnManager : MonoBehaviour
         DeactivateEnemies();
         _gameOverText.gameObject.SetActive(true);
         _resetButton.gameObject.SetActive(true);
+        _returnToTitleButton.gameObject.SetActive(true);
+    }
+
+    public void ShowTitleScreen()
+    {        
+        title.gameObject.SetActive(true);
+        foreach(var button in buttons)
+        {
+            button.gameObject.SetActive(true);
+        }
+        _gameOverText.gameObject.SetActive(false);
+        _resetButton.gameObject.SetActive(false);
+        _returnToTitleButton.gameObject.SetActive(false);
+    }
+
+    public void DeactivateTitleScreen()
+    {
+        title.gameObject.SetActive(false);
+        foreach(var button in buttons)
+        {
+            button.gameObject.SetActive(false);
+        }
     }
 
     public void ResetGame()
     {
         _gameOverText.gameObject.SetActive(false);
         _resetButton.gameObject.SetActive(false);
+        _returnToTitleButton.gameObject.SetActive(false);
         lives = originalLives;
         _score = 0;
         _scoreText.text = string.Format("Score: {0}", _score);

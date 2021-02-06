@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8369116188354207241}
   - component: {fileID: 8369116188354207240}
   - component: {fileID: 8369116188354207243}
-  - component: {fileID: 8572804954460802129}
   - component: {fileID: -6190781027064436284}
   m_Layer: 0
   m_Name: Good 3
@@ -136,18 +135,6 @@ MonoBehaviour:
   explosionParticle: {fileID: 7303472089845130122, guid: 6cbc21f5e9162483993a2b84b14d5ac8,
     type: 3}
   myClip: {fileID: 8300000, guid: 05008bcaa13534162bbd7517ff06204f, type: 3}
---- !u!114 &8572804954460802129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368768980072160823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2962d4dc6d184e4429be6fb296e28756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &-6190781027064436284
 AudioSource:
   m_ObjectHideFlags: 0
