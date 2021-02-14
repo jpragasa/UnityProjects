@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Rocket : MonoBehaviour
@@ -10,6 +11,11 @@ public class Rocket : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private float _thrustSpeed;
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private float _respawnTime;
+    [SerializeField] private float _loadWaitTime;
+
+    enum State { Alive, Dying, Transcending};
+    State state = State.Alive;
 
     void Start()
     {
@@ -20,12 +26,17 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Rotate();
+        if(state == State.Alive)
+        {
+            Thrust();
+            Rotate();
+        }
+        
     }
 
     private void Rotate()
     {
-        Thrust();
+        
         rb.freezeRotation = true; // take manual control of rotation
         if (Input.GetKey(KeyCode.A))
         {
@@ -53,5 +64,48 @@ public class Rocket : MonoBehaviour
         {
             audioSource.Stop();
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(state != State.Alive)
+        {
+            return;
+        }
+
+        switch(collision.gameObject.tag)
+        {
+            case "Friendly":
+                // Do Nothing
+                break;
+            case "Finish":
+                state = State.Transcending;
+                Invoke("LoadNextLevel", _loadWaitTime);
+                break;
+            default:
+                // Death
+                state = State.Dying;
+                audioSource.Stop();
+                StartCoroutine(FreezePosition());
+                break;
+        }
+    }
+
+    private void LoadNextLevel()
+    {
+        SceneManager.LoadScene(1);
+        state = State.Alive;
+    }
+
+    private void LoadFirstLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    IEnumerator FreezePosition()
+    {
+        yield return new WaitForSeconds(_respawnTime);
+        Invoke("LoadFirstLevel", _loadWaitTime);
+        state = State.Alive;
     }
 }
