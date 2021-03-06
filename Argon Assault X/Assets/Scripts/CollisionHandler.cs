@@ -28,11 +28,22 @@ public class CollisionHandler : MonoBehaviour
     IEnumerator Transition()
     {
         ParticleSystem.EmissionModule death = deathParticles.emission;
+        StartDeathSequence(death);
+        yield return new WaitForSeconds(deathDelay);
+        ResolveDeathSequence(death);
+    }
+
+    private void StartDeathSequence(ParticleSystem.EmissionModule death)
+    {
         death.enabled = true;
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<PlayerControls>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
-        yield return new WaitForSeconds(deathDelay);
+    }
+
+    private void ResolveDeathSequence(ParticleSystem.EmissionModule death)
+    {
+        ScoreBoard.ResetScore();
         death.enabled = false;
         GetComponent<MeshRenderer>().enabled = true;
         ReloadScene();

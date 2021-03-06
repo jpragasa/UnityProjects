@@ -39,7 +39,7 @@ public class PlayerControls : MonoBehaviour
         shooting.Disable();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Movement();
         Rotation();
