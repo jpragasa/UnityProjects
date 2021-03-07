@@ -10,9 +10,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject hitVFX;    
     [SerializeField] int pointsToAdd;
     [SerializeField] int hitPoints;
-
     ScoreBoard scoreBoard;
     GameObject parentGameObject;
+
     private void Start()
     {
         SetUp();
@@ -41,11 +41,11 @@ public class Enemy : MonoBehaviour
     {
         GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentGameObject.transform;  
-        scoreBoard.IncreaseScore(pointsToAdd);
         hitPoints--;
     }
     private void DestroyEnemy()
     {
+        scoreBoard.IncreaseScore(pointsToAdd);
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentGameObject.transform;
         Destroy(this.gameObject);
