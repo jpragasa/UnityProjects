@@ -6,14 +6,17 @@ using UnityEngine.InputSystem.Controls;
 
 public class WayPoint : MonoBehaviour
 {
+    [SerializeField] Tower tower;
     [SerializeField] bool isPlaceable;
-    [SerializeField] GameObject tower;
+    
+    public bool IsPlaceable { get { return isPlaceable; } private set { isPlaceable = value; } }
+
     private void OnMouseDown()
     {
         if(isPlaceable)
         {
-            Instantiate(tower, this.transform.position, Quaternion.identity);
-            isPlaceable = false;
+            bool isPlaced = tower.CreateTower(tower, transform.position);            
+            isPlaceable = !isPlaced;
         }        
     }
 }
