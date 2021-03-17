@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/TextUpdater/TextUpdater.unity
+- path: Assets/DelegatesAndEvents/Actions/Actions.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
